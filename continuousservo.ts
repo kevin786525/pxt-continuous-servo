@@ -10,7 +10,7 @@ namespace ContinuousServo {
     */
     //% blockId=spin_one_way weight=100
     //% block="spin one way pin %pin"
-    export function spin_one_way(pin = AnalogPin.P1): void {
+    export function spin_one_way(pin = AnalogPin.P10): void {
       pins.servoWritePin(pin, 180)
     }
 
@@ -32,7 +32,7 @@ namespace ContinuousServo {
     //% blockId=spin_one_way_with_speed weight=60
     //% block="spin one way pin %pin | with speed %speed"
     //% speed.min=0 speed.max=100
-    export function spin_one_way_with_speed(pin = AnalogPin.P1, speed = 50): void {
+    export function spin_one_way_with_speed(pin = AnalogPin.P10, speed = 50): void {
       let spin = (speed * 90) / 100 + 90
       pins.servoWritePin(pin, spin)
     }
